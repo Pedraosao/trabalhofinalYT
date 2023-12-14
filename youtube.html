@@ -3,116 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <title>Youtube Links</title>
+
     <header>
-    <h1>
-        <img class="logo" src="https://img.freepik.com/vetores-premium/logo-vermelho-do-youtube-logo-de-midia-social_197792-1803.jpg" alt="Youtube Logo">
-        Youtube Links
+    
+    <h2 style="color: white;">
+    <img  name="foto" src="https://img.freepik.com/vetores-premium/logo-vermelho-do-youtube-logo-de-midia-social_197792-1803.jpg" width="50" height="40" style="border-radius: 10px;">
+    Youtube Links
+    </h2>
 
-    </h1>
-
+    <form>
+        <div class="form-group">
+        <input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar">
+        <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">
+            <img name="procura" src="https://img.icons8.com/material-outlined/24/ffffff/search--v1.png" alt="Pesquisar" style="width: 24px; height: 24px;">
+        </button>
+        </div>
+        </form>
     </header>
+
 </head>
-
 <body>
+    <section class="main">
 
-    <form id="iniciar">
-    <div class="bemvindo">
-        <p>Bem-vindo ao seu site de vídeos!</p>
+        <div style="font-size: 30px;"> 
+
+            <button id="clearResults" style="background: none; border: none; padding: 0; cursor: pointer;">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/trash--v1.png" alt="Limpar Resultados" style="width: 24px; height: 24px;">
+        </button>
+
+            Resultados da pesquisa: 
+
+        </div>
+
+    
+    <div class="row">
+    <div class="col-md-12">
+        <div id ="videos">
+            
+        </div>
+        
     </div>
 
-    <a href="https://pedraosao.github.io/trabalhofinalYT/index.html">
-        <button>Iniciar Sessão</button>
-    </a>
-</form>
+</div>
 
-
+    <div class="youtube-videos"> </div>
+    </section>
 
     <style>
-        * {
+
+   * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial;
+            outline: none;
         }
 
-        body {
-            font-family: Arial, sans-serif;
+        html, body {
+            height: 100%;
             background: linear-gradient(to bottom, rgb(255, 0, 0), rgb(62, 18, 18));
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            color: white;
-            text-align: center;
+            background-attachment: fixed;
         }
 
         header {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 30px;
-            padding: 30px;
-        }
-
-        .logo {
-            width: 60px;
-            height: 50px;
-            border-radius: 10px;
-        }
-
-        .bemvindo {
-            font-size: 30px;
-            margin-bottom: 30px;
-        }
-
-        #iniciar {
-            max-width: 800px;
-            max-height: 500px;
-            padding: 50px;
-            border: 2px solid darkred;
-            border-radius: 10px;
-            background-color: rgba(0,0,0,0.600);
-            text-align: center;
-            display: inline-block;
-        }
-
-        button {
-            padding: 15px 30px;
-            font-size: 20px;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.600);
+            background-color: rgba(0, 0, 0, 0.6);
             color: white;
+            padding: 25px;
+            text-align: center;
+            order: 2px solid darkred;
+            font-size: 30px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            height: 40px;
+            padding: 20px;
+            padding-left: 35px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border: 0;
+            border-radius: 10px;
+            font-size: 23px;
+            color: white;
+        }
+
+        button[type="submit"] {
+            background: none;
+            border: none;
+            padding: 0;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
 
-        button:hover {
-            background-color: rgba(0, 0, 0, 0.800);
+        img.procura {
+            width: 24px;
+            height: 24px;
         }
 
-        @media screen and (max-width: 992px) {
-            .bemvindo {
-                font-size: 20px;
+        .main {
+            margin: 20px auto;
+            max-width: 1200px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.550);
+            padding: 30px 2%;
+            border-radius: 80px;
+            position: relative;
+            text-align: center;
+            color: white;
+            font-size: 100%;
+        }
+
+        .main h2 {
+            font-size: 45px;
+            color: white;
+        }
+
+        .youtube-videos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .youtube-videos iframe {
+            width: calc(50% - 40px);
+            max-width: 560px;
+            height: 315px;
+            margin: 20px;
+        }
+
+        #clearResults img {
+            width: 24px;
+            height: 24px;
+        }
+
+        #pesquisa {
+            width: 80%;
+            height: 40px;
+            padding: 20px;
+            padding-left: 35px;
+            background-color: rgb(255, 255, 255, 0.4);
+            border: 0;
+            border-radius: 10px;
+            font-size: 23px;
+            color: white;
+        }
+
+        ::placeholder {
+            color: white;
+            opacity: 1;
+        }
+
+        ::ms-input-placeholder {
+            color: white;
+            opacity: 1;
+        }
+
+
+        @media only screen and (max-width: 768px) {
+            header {
+                padding: 15px;
+                font-size: 25px;
             }
 
-            button {
-                padding: 10px 20px;
-                font-size: 15px;
+            input[type="text"] {
+                width: 90%;
+                height: 35px;
+                padding: 15px;
+                font-size: 18px;
+            }
+
+            .main {
+                padding: 20px 5%;
+            }
+
+            .main h2 {
+                font-size: 35px;
+            }
+
+            .youtube-videos iframe {
+                width: 90%;
+                height: 200px;
+                margin: 10px auto;
+            }
+
+            #videos iframe {
+                width: calc(100% - 20px);
+                margin: 10px;
             }
         }
 
-        @media screen and (max-width: 600px) {
-            .bemvindo {
-                font-size: 15px;
+        @media only screen and (min-width: 769px) {
+            input[type="text"] {
+                width: 70%;
+                height: 40px;
+                padding: 20px;
+                font-size: 23px;
             }
 
-            button {
-                padding: 8px 16px;
-                font-size: 12px;
+            .main {
+                padding: 30px 2%;
+            }
+
+            .main h2 {
+                font-size: 45px;
+            }
+
+            .youtube-videos iframe {
+                width: calc(50% - 40px);
+                max-width: 560px;
+                height: 315px;
+                margin: 20px;
+            }
+
+            #videos iframe {
+                width: calc(50% - 20px);
+                margin: 10px;
             }
         }
+
+        @media screen and (min-width: 1025px) {
+            .youtube-videos iframe {
+                width: calc(50% - 20px);
+                margin: 10px;
+            }
+
+            #videos iframe {
+                width: calc(50% - 20px);
+                margin: 10px;
+            }
+        }
+
+
     </style>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                searchVideos();
+            });
+
+            document.getElementById('clearResults').addEventListener('click', function() {
+                document.getElementById('pesquisa').value = '';
+                document.getElementById('videos').innerHTML = '';
+            });
+
+            function searchVideos() {
+                const searchTerm = document.getElementById('pesquisa').value;
+                const apiKey = 'AIzaSyANy4MHdTd5vBitzqylWELr5rgu0fHANoM';
+                const maxResults = 10;
+
+                const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchTerm}&type=video&maxResults=${maxResults}&key=${apiKey}`;
+
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        const videos = data.items;
+                        const videosDiv = document.getElementById('videos');
+                        videosDiv.innerHTML = '';
+
+                        videos.forEach(video => {
+                            const videoId = video.id.videoId;
+                            const videoTitle = video.snippet.title;
+                            const videoThumbnail = video.snippet.thumbnails.default.url;
+
+                            const videoElement = document.createElement('iframe');
+                            videoElement.src = `https://www.youtube.com/embed/${videoId}?&fs=1`;
+                            videoElement.allowFullscreen = true;
+                            videoElement.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+                            videoElement.width = 560;
+                            videoElement.height = 315;
+
+                            videosDiv.appendChild(videoElement);
+                        });
+                    })
+                    .catch(error => console.error('Erro ao buscar vídeos: ', error));
+            }
+        });
+    </script>
 
 </body>
 </html>
+
