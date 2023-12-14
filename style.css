@@ -1,0 +1,179 @@
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+            outline: none;
+        }
+
+        html, body {
+            height: 100%;
+            background: linear-gradient(to bottom, rgb(255, 0, 0), rgb(62, 18, 18));
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            order: 2px solid darkred;
+            font-size: 30px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            height: 40px;
+            padding: 20px;
+            padding-left: 35px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border: 0;
+            border-radius: 10px;
+            font-size: 23px;
+            color: white;
+        }
+
+        button[type="submit"] {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        img.procura {
+            width: 24px;
+            height: 24px;
+        }
+
+        .main {
+            margin: 20px auto;
+            max-width: 1200px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.550);
+            padding: 30px 2%;
+            border-radius: 80px;
+            position: relative;
+            text-align: center;
+            color: white;
+            font-size: 100%;
+        }
+
+        .main h2 {
+            font-size: 45px;
+            color: white;
+        }
+
+        .youtube-videos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .youtube-videos iframe {
+            width: calc(50% - 40px);
+            max-width: 560px;
+            height: 315px;
+            margin: 20px;
+        }
+
+        #clearResults img {
+            width: 24px;
+            height: 24px;
+        }
+
+        #pesquisa {
+            width: 80%;
+            height: 40px;
+            padding: 20px;
+            padding-left: 35px;
+            background-color: rgb(255, 255, 255, 0.4);
+            border: 0;
+            border-radius: 10px;
+            font-size: 23px;
+            color: white;
+        }
+
+        ::placeholder {
+            color: white;
+            opacity: 1;
+        }
+
+        ::ms-input-placeholder {
+            color: white;
+            opacity: 1;
+        }
+
+
+        @media only screen and (max-width: 768px) {
+            header {
+                padding: 15px;
+                font-size: 25px;
+            }
+
+            input[type="text"] {
+                width: 90%;
+                height: 35px;
+                padding: 15px;
+                font-size: 18px;
+            }
+
+            .main {
+                padding: 20px 5%;
+            }
+
+            .main h2 {
+                font-size: 35px;
+            }
+
+            .youtube-videos iframe {
+                width: 90%;
+                height: 200px;
+                margin: 10px auto;
+            }
+
+            #videos iframe {
+                width: calc(100% - 20px);
+                margin: 10px;
+            }
+        }
+
+        @media only screen and (min-width: 769px) {
+            input[type="text"] {
+                width: 70%;
+                height: 40px;
+                padding: 20px;
+                font-size: 23px;
+            }
+
+            .main {
+                padding: 30px 2%;
+            }
+
+            .main h2 {
+                font-size: 45px;
+            }
+
+            .youtube-videos iframe {
+                width: calc(50% - 40px);
+                max-width: 560px;
+                height: 315px;
+                margin: 20px;
+            }
+
+            #videos iframe {
+                width: calc(50% - 20px);
+                margin: 10px;
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            .youtube-videos iframe {
+                width: calc(50% - 20px);
+                margin: 10px;
+            }
+
+            #videos iframe {
+                width: calc(50% - 20px);
+                margin: 10px;
+            }
+        }
