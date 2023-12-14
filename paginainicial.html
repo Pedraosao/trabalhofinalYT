@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Youtube Links</title>
+    <header>
+    <h1>
+        <img class="logo" src="https://img.freepik.com/vetores-premium/logo-vermelho-do-youtube-logo-de-midia-social_197792-1803.jpg" alt="Youtube Logo">
+        Youtube Links
+
+    </h1>
+
+    </header>
+</head>
+
+<body>
+
+    <form id="iniciar">
+    <div class="bemvindo">
+        <p>Bem-vindo ao seu site de vídeos!</p>
+    </div>
+
+    <a href="pagina-de-videos.html">
+        <button>Iniciar Sessão</button>
+    </a>
+</form>
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, rgb(255, 0, 0), rgb(62, 18, 18));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            padding: 30px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        .bemvindo {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        #iniciar {
+            max-width: 800px;
+            max-height: 500px;
+            padding: 50px;
+            border: 2px solid darkred;
+            border-radius: 10px;
+            background-color: rgba(0,0,0,0.600);
+            text-align: center;
+            display: inline-block;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.600);
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.800);
+        }
+
+        @media screen and (max-width: 992px) {
+            .bemvindo {
+                font-size: 20px;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .bemvindo {
+                font-size: 15px;
+            }
+
+            button {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+        }
+    </style>
+
+</body>
+</html>
